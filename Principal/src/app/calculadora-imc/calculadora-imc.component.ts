@@ -16,7 +16,18 @@ export class CalculadoraIMCComponent {
     if(this.altura > 0.01 && this.altura < 3 && this.peso > 1 && this.peso < 500)
     {
       this.imc = this.peso	/ (this.altura * this.altura);
-      this.message = 'Seu imc é ' + this.imc;
+      if(this.imc < 18.5)
+      this.message = 'Seu imc é ' + this.imc + ', Você está abaixo do peso normal!';
+      if(this.imc >= 18.5 && this.imc <= 24.9)
+      this.message = 'Seu imc é ' + this.imc + ', Você está dentro do peso normal!';
+      if(this.imc >=25 && this.imc <= 29.9)
+      this.message = 'Seu imc é ' + this.imc + ', Você está com excesso de peso!';
+      if(this.imc >=30 && this.imc <= 34.9)
+      this.message = 'Seu imc é ' + this.imc + ', Você está com grau de obesidade I!';
+      if(this.imc >=35 && this.imc <=39.9)
+      this.message = 'Seu imc é ' + this.imc + ', Você está com grau de obesidade II!';
+      if(this.imc > 40)
+      this.message = 'Seu imc é ' + this.imc + ', Você está com grau de obesidade III!';
     }
     else
     {

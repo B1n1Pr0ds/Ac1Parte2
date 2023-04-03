@@ -1,10 +1,10 @@
 <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label">Insira sua altura: </label>
-    <input [(ngMode1)]="altura" type="text" class="form-control" id="altura" placeholder="Ex: 1.70">
+    <input [(ngModel)]="altura" type="text" class="form-control" id="altura" placeholder="Ex: 1.70">
   </div>
   <div class="mb-3">
     <label for="formGroupExampleInput2" class="form-label">Insira seu peso: </label>
-    <input [(ngMode1)]="peso" type="text" class="form-control" id="peso" placeholder="Ex: 75">
+    <input [(ngModel)]="peso" type="text" class="form-control" id="peso" placeholder="Ex: 75">
   </div>
   <div><button type="button" (click) = "Calcular()" class="btn btn-primary">Calcular</button></div>
   <p>{{message}}</p>
